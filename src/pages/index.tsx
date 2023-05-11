@@ -17,7 +17,7 @@ interface HomeProps {
         id: string,
         name: string,
         imageUrl: string,
-        price: number,
+        price: string,
     }[]
 }
 
@@ -35,7 +35,7 @@ export default function Home({ products }: HomeProps) {
                 return (
                     <Link
                         key={product.id}
-                        href={`/product/{product.id}`}
+                        href={`/product/${product.id}`}
                     >
                         <Product 
                             className="keen-slider__slide"
